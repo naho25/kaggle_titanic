@@ -16,7 +16,7 @@ table(train$Survived, train$Sex)
 
 ans_1 <- test %>% 
   select(PassengerId, Sex) %>% 
-  mutate(Servived = ifelse(Sex == "female", 1, 0)) %>% 
+  mutate(Survived = ifelse(Sex == "female", 1, 0)) %>% 
   select(-Sex) 
 write_csv(ans_1, "output/ans_1.csv")
   
